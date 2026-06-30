@@ -140,3 +140,18 @@ button:hover {
 .links a:hover {
   color: #00ffae;
 }
+
+.change-reality {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  color: #7fe8ff;
+  text-decoration: none;
+  z-index: 2;
+  transition: color .2s ease;
+}
+
+.change-reality:hover {
+  color: #00ffae;
+}

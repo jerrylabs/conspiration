@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conspiration of Enshittening</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='50%' x='50%' font-size='48' text-anchor='middle' dominant-baseline='middle'>💩</text></svg>">
-</head>
-<body>
-  <div class="bg"></div>
-
-  <main class="container">
-    <div class="symbol">◈</div>
-    <h1>Conspiration of Enshittening</h1>
-    <p class="subtitle">
-      Electronic Rituals • Psytrance • Tekno • DnB  • Jungle• World Music
-    </p>
-
-    <button id="toggleBtn">ENTER THE RITUAL</button>
-
-    <canvas id="viz" width="700" height="120"></canvas>
-
-    <div class="links">
-      Estimated 2026
-    </div>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8">
+<title>Choose your path</title>
+<style>
+body{margin:0;font-family:Arial;background:#000;color:#fff;display:flex;height:100vh}
+a{flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none;
+font-size:3em;transition:.5s}
+#l{background:#050505;color:#00ffae}
+#r{background:#f7f6f1;color:#73604e}
+#l, #r {text-align:center;}
+@media  (max-width: 600px) {
+  a  {font-size: 2em;}
+}
+a:hover{flex:1.2;filter:brightness(1.1)}
+.center{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);font-size:80px;pointer-events:none;z-index: 1; color: gray;}
+.title{position:fixed;left:50%;top:8%;transform:translate(-50%,-50%);font-size:2em;letter-spacing:.15em;text-transform:uppercase;pointer-events:none;mix-blend-mode:difference;color:#fff;text-align:center;z-index: 1;}
+</style></head><body>
+<div class="title">Choose your reality</div>
+<div class="center">◈</div>
+<a id="l" href="shadow/index.html">☾<br>SHADOW</a>
+<a id="r" href="light/index.html">☀<br>LIGHT</a>
+</body></html>
