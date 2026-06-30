@@ -90,10 +90,10 @@ function sequencer() {
   const time = audioCtx.currentTime;
 
   // Kick on every beat
-  if (step % 4 === 0) kick(time);
+  if (step % 4 === 0 || step % 64 === 3 || step % 128 === 2 || step % 64 === 26) kick(time);
 
   // Offbeat hats
-  if (step % 2 === 1) hat(time);
+  if (step % 2 === 0 && step % 32 !== 0) hat(time);
 
   // Psy bass
   const pattern = [55, 55, 65.4, 55];
