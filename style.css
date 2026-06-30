@@ -39,10 +39,44 @@ body {
 }
 
 .symbol {
-  font-size: 90px;
-  color: #00ffae;
-  text-shadow: 0 0 20px rgba(0,255,174,.7);
-  animation: rotate 18s linear infinite;
+    font-size: 90px;
+    font-weight: bold;
+
+    background: linear-gradient(
+        45deg,
+        #00ff88,
+        #00d8ff,
+        #b000ff,
+        #00ff88
+    );
+
+    background-size: 400% 400%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: rotate 18s linear infinite;
+}
+
+.symbol.playing {
+    animation:
+        rotate 18s linear infinite,
+        gradientShift 6s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes rotate {

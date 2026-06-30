@@ -1,6 +1,7 @@
 const btn = document.getElementById('toggleBtn');
 const canvas = document.getElementById('viz');
 const ctx = canvas.getContext('2d');
+const symbol = document.querySelector(".symbol");
 
 let audioCtx;
 let interval;
@@ -112,9 +113,11 @@ btn.addEventListener('click', async () => {
     interval = setInterval(sequencer, stepTime * 1000);
     btn.textContent = 'STOP THE RITUAL';
     isPlaying = true;
+    symbol.classList.add("playing");
   } else {
     clearInterval(interval);
     btn.textContent = 'ENTER THE RITUAL';
     isPlaying = false;
+    symbol.classList.remove("playing");
   }
 });
